@@ -14,6 +14,10 @@ import { ProductListComponent } from './Components/product/product-list/product-
 import { ProductCreateComponent } from './Components/product/product-create/product-create.component';
 import { ProductEditComponent } from './Components/product/product-edit/product-edit.component';
 import { ProductDetailComponent } from './Components/product/product-detail/product-detail.component';
+import { VendorListComponent } from './Components/vendor/vendor-list/vendor-list.component';
+import { VendorCreateComponent } from './Components/vendor/vendor-create/vendor-create.component';
+import { VendorDetailComponent } from './Components/vendor/vendor-detail/vendor-detail.component';
+import { VendorEditComponent } from './Components/vendor/vendor-edit/vendor-edit.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,10 @@ import { ProductDetailComponent } from './Components/product/product-detail/prod
     ProductCreateComponent,
     ProductEditComponent,
     ProductDetailComponent,
+    VendorListComponent,
+    VendorCreateComponent,
+    VendorDetailComponent,
+    VendorEditComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

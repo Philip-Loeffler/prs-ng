@@ -9,6 +9,10 @@ import { ProductListComponent } from './Components/product/product-list/product-
 import { ProductDetailComponent } from './Components/product/product-detail/product-detail.component';
 import { ProductEditComponent } from './Components/product/product-edit/product-edit.component';
 import { ProductCreateComponent } from './Components/product/product-create/product-create.component';
+import { VendorListComponent } from './Components/vendor/vendor-list/vendor-list.component';
+import { VendorDetailComponent } from './Components/vendor/vendor-detail/vendor-detail.component';
+import { VendorEditComponent } from './Components/vendor/vendor-edit/vendor-edit.component';
+import { VendorCreateComponent } from './Components/vendor/vendor-create/vendor-create.component';
 
 const routes: Routes = [
   { path: 'user-login', component: UserLoginComponent },
@@ -20,6 +24,10 @@ const routes: Routes = [
   { path: 'product-detail/:id', component: ProductDetailComponent },
   { path: 'product-edit/:id', component: ProductEditComponent },
   { path: 'product-create', component: ProductCreateComponent },
+  { path: 'vendor-list', component: VendorListComponent },
+  { path: 'vendor-detail/:id', component: VendorDetailComponent },
+  { path: 'vendor-edit/:id', component: VendorEditComponent },
+  { path: 'vendor-create', component: VendorCreateComponent },
 ];
 
 @NgModule({
