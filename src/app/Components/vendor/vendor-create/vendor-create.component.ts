@@ -20,7 +20,7 @@ export class VendorCreateComponent implements OnInit {
       (resp) => {
         this.vendor = resp as Vendor;
         console.log('movies', this.vendor);
-        this.router.navigateByUrl('/user-list');
+        this.router.navigateByUrl('/vendor-list');
       },
       (err) => {
         console.log(err);

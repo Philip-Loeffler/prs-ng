@@ -37,7 +37,7 @@ export class ProductDetailComponent implements OnInit {
       (resp) => {
         this.product = resp as Product;
         console.log('movies', this.product);
-        this.router.navigateByUrl('/movie-list');
+        this.router.navigateByUrl('/product-list');
       },
       (err) => {
         console.log(err);

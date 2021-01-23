@@ -37,7 +37,7 @@ export class ProductEditComponent implements OnInit {
       (resp) => {
         this.product = resp as Product;
         console.log('movies', this.product);
-        this.router.navigateByUrl('/user-list');
+        this.router.navigateByUrl('/product-list');
       },
       (err) => {
         console.log(err);

@@ -34,7 +34,7 @@ export class VendorDetailComponent implements OnInit {
     this.vendorService.delete(this.vendor.id).subscribe(
       (resp) => {
         this.vendor = resp as Vendor;
-        this.router.navigateByUrl('/movie-list');
+        this.router.navigateByUrl('/vendor-list');
       },
       (err) => {
         console.log(err);
