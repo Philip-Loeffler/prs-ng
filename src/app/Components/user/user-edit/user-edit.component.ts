@@ -27,7 +27,6 @@ export class UserEditComponent implements OnInit {
       (resp) => {
         this.user = resp as User;
         console.log(this.user.id);
-        console.log('movies', this.user);
       },
       (err) => {
         console.log(err);
@@ -39,7 +38,7 @@ export class UserEditComponent implements OnInit {
       (resp) => {
         this.user = resp as User;
         console.log('movies', this.user);
-        this.router.navigateByUrl('/movie-list');
+        this.router.navigateByUrl('/user-list');
       },
       (err) => {
         console.log(err);

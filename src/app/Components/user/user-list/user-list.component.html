@@ -16,12 +16,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of users">
-      <td>{{ user.id }}</td>
-      <td>{{ user.userName }}</td>
-      <td>{{ user.firstName }}</td>
-      <td>{{ user.lastName }}</td>
-      <td>{{ user.email }}</td>
+    <tr *ngFor="let users of user">
+      <td>{{ users.id }}</td>
+      <td>{{ users.userName }}</td>
+      <td>{{ users.firstName }}</td>
+      <td>{{ users.lastName }}</td>
+      <td>{{ users.email }}</td>
 
       <td>
         <a routerLink="/user-detail/{{ user.id }}">

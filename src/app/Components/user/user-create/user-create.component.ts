@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class UserCreateComponent implements OnInit {
   title = 'User Create';
-  user: User; //  is what he had double check later  user: User = new User();
+  user: User = new User();
   submitBtnTitle = 'Create';
   constructor(private userSvc: UserService, private router: Router) {}
 
@@ -21,7 +21,7 @@ export class UserCreateComponent implements OnInit {
       (resp) => {
         this.user = resp as User;
         console.log('movies', this.user);
-        this.router.navigateByUrl('/movie-list');
+        this.router.navigateByUrl('/user-list');
       },
       (err) => {
         console.log(err);
