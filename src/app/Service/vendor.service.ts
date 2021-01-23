@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Vendor } from '../Model/vendor';
+import { Vendor } from 'src/app/Model/vendor';
 
 const URL = 'http://localhost:8080/vendor';
 @Injectable({

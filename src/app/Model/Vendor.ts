@@ -9,16 +9,16 @@ export class Vendor {
   phoneNumber: string;
   email: string;
 
-  constructor(
-    id = 0,
-    code: '',
-    name: '',
-    address: '',
-    city: '',
-    state: '',
-    zip: '',
-    phoneNumber: '',
-    email: ''
+  consturctor(
+    id: number = 0,
+    code: string = '',
+    name: string = '',
+    address: string = '',
+    city: string = '',
+    state: string = '',
+    zip: string = '',
+    phoneNumber: string = '',
+    email: string = ''
   ) {
     this.id = id;
     this.code = code;

@@ -1,1 +1,68 @@
-<p>vendor-create works!</p>
+<app-menu></app-menu>
+<section class="heading">
+  <span class="component-title">[{{ title }}]</span>
+</section>
+<main class="single">
+  <table class="table table-sm">
+    <tr>
+      <td>Username:</td>
+      <td>
+        <input [(ngModel)]="vendor.id" class="rounded" type="text" />
+      </td>
+    </tr>
+    <tr>
+      <td>code:</td>
+      <td>
+        <input [(ngModel)]="user.code" class="rounded" type="text" />
+      </td>
+    </tr>
+    <tr>
+      <td>Name:</td>
+      <td>
+        <input [(ngModel)]="user.name" class="rounded" type="text" />
+      </td>
+    </tr>
+    <tr>
+      <td>address:</td>
+      <td>
+        <input [(ngModel)]="user.address" class="rounded" type="text" />
+      </td>
+    </tr>
+
+    <tr>
+      <td>city:</td>
+      <td>
+        <input [(ngModel)]="user.city" class="rounded" type="text" />
+      </td>
+    </tr>
+    <tr>
+      <td>state:</td>
+      <td>
+        <input [(ngModel)]="user.state" class="rounded" type="text" />
+      </td>
+    </tr>
+    <tr>
+      <td>zip:</td>
+      <td>
+        <input [(ngModel)]="user.zip" class="rounded" type="text" />
+      </td>
+    </tr>
+    <tr>
+      <td>phoneNumber:</td>
+      <td>
+        <input [(ngModel)]="user.phoneNumber" class="rounded" type="text" />
+      </td>
+    </tr>
+    <tr>
+      <td>email:</td>
+      <td>
+        <input [(ngModel)]="user.email" class="rounded" type="text" />
+      </td>
+    </tr>
+  </table>
+</main>
+<span
+  ><button (click)="save()" class="btn btn-sm btn-primary">
+    {{ submitBtnTitle }}
+  </button></span
+>
