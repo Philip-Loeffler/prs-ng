@@ -23,8 +23,6 @@ export class UserDetailComponent implements OnInit {
     this.userService.getById(this.userId).subscribe(
       (resp) => {
         this.user = resp as User;
-        console.log(this.user.id);
-        console.log('movies', this.user);
       },
       (err) => {
         console.log(err);
@@ -35,7 +33,6 @@ export class UserDetailComponent implements OnInit {
     this.userService.delete(this.user.id).subscribe(
       (resp) => {
         this.user = resp as User;
-        console.log('movies', this.user);
         this.router.navigateByUrl('/movie-list');
       },
       (err) => {

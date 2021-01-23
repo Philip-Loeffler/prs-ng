@@ -1,5 +1,4 @@
 import { Vendor } from 'src/app/Model/Vendor';
-import { threadId } from 'worker_threads';
 
 export class Product {
   id: number;

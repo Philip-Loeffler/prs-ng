@@ -10,6 +10,10 @@ import { UserEditComponent } from './Components/user/user-edit/user-edit.compone
 import { UserCreateComponent } from './Components/user/user-create/user-create.component';
 import { UserDetailComponent } from './Components/user/user-detail/user-detail.component';
 import { MenuComponent } from './Components/menu/menu.component';
+import { ProductListComponent } from './Components/product/product-list/product-list.component';
+import { ProductCreateComponent } from './Components/product/product-create/product-create.component';
+import { ProductEditComponent } from './Components/product/product-edit/product-edit.component';
+import { ProductDetailComponent } from './Components/product/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,10 @@ import { MenuComponent } from './Components/menu/menu.component';
     UserCreateComponent,
     UserDetailComponent,
     MenuComponent,
+    ProductListComponent,
+    ProductCreateComponent,
+    ProductEditComponent,
+    ProductDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

@@ -9,36 +9,40 @@
   <thead>
     <tr>
       <th>id</th>
-      <th>user name</th>
-      <th>first name</th>
-      <th>last name</th>
-      <th>email</th>
+      <th>Vendor</th>
+      <th>Part Number</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Unit</th>
+      <th>PhotoPath</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let users of user">
-      <td>{{ users.id }}</td>
-      <td>{{ users.userName }}</td>
-      <td>{{ users.firstName }}</td>
-      <td>{{ users.lastName }}</td>
-      <td>{{ users.email }}</td>
+    <tr *ngFor="let products of product">
+      <td>{{ products.id }}</td>
+      <td>{{ products.vendor }}</td>
+      <td>{{ products.partNumber }}</td>
+      <td>{{ products.name }}</td>
+      <td>{{ products.price }}</td>
+      <td>{{ products.unit }}</td>
+      <td>{{ products.photoPath }}</td>
 
       <td>
-        <a routerLink="/user-detail/{{ users.id }}">
+        <a routerLink="/product-detail/{{ products.id }}">
           <img
             width="20"
             height="20"
             src="assets/details.png"
-            title="User Details"
+            title="Product Details"
           />
         </a>
-        |
-        <a routerLink="/user-edit/{{ users.id }}">
+
+        <a routerLink="/product-edit/{{ products.id }}">
           <img
             width="20"
             height="20"
             src="assets/pencil-icon.png"
-            title="User Edit"
+            title="Product Edit"
           />
         </a>
       </td>
