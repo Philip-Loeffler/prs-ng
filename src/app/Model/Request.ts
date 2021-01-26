@@ -1,6 +1,7 @@
 import { User } from 'src/app/Model/User';
 
 export class Request {
+  id: number;
   user: User;
   description: string;
   justification: string;
@@ -12,6 +13,7 @@ export class Request {
   reasonForRejection: string;
 
   constructor(
+    id = 0,
     user: User,
     description: '',
     justification: '',
@@ -22,6 +24,7 @@ export class Request {
     submittedDate: '',
     reasonForRejection: ''
   ) {
+    this.id = id;
     this.user = user;
     this.description = description;
     this.justification = justification;

@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./purchase-request-create.component.css'],
 })
 export class PurchaseRequestCreateComponent implements OnInit {
-  title = 'User Create';
+  title = 'Purchase Request Create';
   PurchaseRequests: PurchaseRequest = new PurchaseRequest();
   submitBtnTitle = 'Create';
   constructor(
@@ -24,7 +24,7 @@ export class PurchaseRequestCreateComponent implements OnInit {
       (resp) => {
         this.PurchaseRequests = resp as PurchaseRequest;
         console.log('movies', this.PurchaseRequests);
-        this.router.navigateByUrl('/product-list');
+        this.router.navigateByUrl('/purchase-request-list');
       },
       (err) => {
         console.log(err);
