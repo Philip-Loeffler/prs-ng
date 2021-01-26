@@ -1,0 +1,57 @@
+<app-menu></app-menu>
+<section class="heading">
+  <span class="page-title font-weight-bold font-italic">[{{ title }}]</span>
+  <a routerLink="/user-create">
+    <img width="20" height="20" src="assets/add-icon.png" title="Add New" />
+  </a>
+</section>
+<table class="table table-sm table-striped">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>user</th>
+      <th>description</th>
+      <th>justification</th>
+      <th>dateNeeded</th>
+      <th>deliveryMode</th>
+      <th>status</th>
+      <th>total</th>
+      <th>submittedDate</th>
+      <th>reasonForRejection</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let purchaseRequest of purchaseRequests">
+      <td>{{ purchaseRequest.id }}</td>
+      <td>{{ purchaseRequest.user.userName }}</td>
+      <td>{{ purchaseRequest.description }}</td>
+      <td>{{ purchaseRequest.justification }}</td>
+      <td>{{ purchaseRequest.dateNeeded }}</td>
+      <td>{{ purchaseRequest.deliveryMode }}</td>
+      <td>{{ purchaseRequest.status }}</td>
+      <td>{{ purchaseRequest.total }}</td>
+      <td>{{ purchaseRequest.submittedDate }}</td>
+      <td>{{ purchaseRequest.reasonForRejection }}</td>
+
+      <td>
+        <a routerLink="/purchase-request-detail/{{ purchaseRequests.id }}">
+          <img
+            width="20"
+            height="20"
+            src="assets/details.png"
+            title="Product Details"
+          />
+        </a>
+
+        <a routerLink="/purchase-request-detail/{{ purchaseRequests.id }}">
+          <img
+            width="20"
+            height="20"
+            src="assets/pencil-icon.png"
+            title="Product Edit"
+          />
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>

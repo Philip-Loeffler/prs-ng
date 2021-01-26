@@ -18,6 +18,13 @@ import { VendorListComponent } from './Components/vendor/vendor-list/vendor-list
 import { VendorCreateComponent } from './Components/vendor/vendor-create/vendor-create.component';
 import { VendorDetailComponent } from './Components/vendor/vendor-detail/vendor-detail.component';
 import { VendorEditComponent } from './Components/vendor/vendor-edit/vendor-edit.component';
+import { PurchaseRequestListComponent } from './Components/purchase-request/purchase-request-list/purchase-request-list.component';
+import { PurchaseRequestCreateComponent } from './Components/purchase-request/purchase-request-create/purchase-request-create.component';
+import { PurchaseRequestEditComponent } from './Components/purchase-request/purchase-request-edit/purchase-request-edit.component';
+import { PurchaseRequestDetailComponent } from './Components/purchase-request/purchase-request-detail/purchase-request-detail.component';
+import { PurchaseRequestApproveComponent } from './Components/purchase-request/purchase-request-approve/purchase-request-approve.component';
+import { PurchaseRequestLinesComponent } from './Components/purchase-request/purchase-request-lines/purchase-request-lines.component';
+import { PurchaseRequestReviewComponent } from './Components/purchase-request/purchase-request-review/purchase-request-review.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +43,13 @@ import { VendorEditComponent } from './Components/vendor/vendor-edit/vendor-edit
     VendorCreateComponent,
     VendorDetailComponent,
     VendorEditComponent,
+    PurchaseRequestListComponent,
+    PurchaseRequestCreateComponent,
+    PurchaseRequestEditComponent,
+    PurchaseRequestDetailComponent,
+    PurchaseRequestApproveComponent,
+    PurchaseRequestLinesComponent,
+    PurchaseRequestReviewComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
