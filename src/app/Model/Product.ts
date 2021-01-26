@@ -10,13 +10,13 @@ export class Product {
   photoPath: string;
 
   constructor(
-    id = 0,
-    vendor: Vendor,
-    partNumber: '',
-    name: '',
-    price = 0,
-    unit: '',
-    photoPath: ''
+    id: number = 0,
+    vendor: Vendor = null,
+    partNumber: string = '',
+    name: string = '',
+    price: number = 0,
+    unit: string = '',
+    photoPath: string = ''
   ) {
     this.id = id;
     this.vendor = vendor;

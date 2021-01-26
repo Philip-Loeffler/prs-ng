@@ -5,24 +5,24 @@ export class PurchaseRequest {
   user: User;
   description: string;
   justification: string;
-  dateNeeded: string;
+  dateNeeded: Date;
   deliveryMode: string;
   status: string;
   total: number;
-  submittedDate: string;
+  submittedDate: Date;
   reasonForRejection: string;
 
   constructor(
-    id = 0,
-    user: User,
-    description: '',
-    justification: '',
-    dateNeeded: '',
-    deliveryMode: '',
-    status: '',
-    total = 0,
-    submittedDate: '',
-    reasonForRejection: ''
+    id: number = 0,
+    user: User = new User(),
+    description: string = '',
+    justification: string = '',
+    dateNeeded: Date = new Date(),
+    deliveryMode: string = '',
+    status: string = '',
+    total: number = 0,
+    submittedDate: Date = new Date(),
+    reasonForRejection: string = ''
   ) {
     this.id = id;
     this.user = user;

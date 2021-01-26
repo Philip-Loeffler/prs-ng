@@ -1,1 +1,99 @@
-<p>purchase-request-detail works!</p>
+<app-menu></app-menu>
+<section class="heading">
+  <span class="component-title">[{{ title }}]</span>
+</section>
+<main *ngIf="purchaseRequests" class="single">
+  <table class="table table-sm">
+    <tr>
+      <td>id:</td>
+      <td>
+        <input [(ngModel)]="purchaseRequests.id" class="rounded" type="text" />
+      </td>
+    </tr>
+    <tr>
+      <td>userName:</td>
+      <td>
+        <input
+          [(ngModel)]="purchaseRequests.user.userName"
+          class="rounded"
+          type="text"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>description:</td>
+      <td>
+        <input
+          [(ngModel)]="purchaseRequests.description"
+          class="rounded"
+          type="text"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>justification:</td>
+      <td>
+        <input
+          [(ngModel)]="purchaseRequests.justification"
+          class="rounded"
+          type="text"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>dateNeeded:</td>
+      <td>
+        <input
+          [(ngModel)]="purchaseRequests.dateNeeded"
+          class="rounded"
+          type="text"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>status:</td>
+      <td>
+        <input
+          [(ngModel)]="purchaseRequests.status"
+          class="rounded"
+          type="text"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>submittedDate:</td>
+      <td>
+        <input
+          [(ngModel)]="purchaseRequests.submittedDate"
+          class="rounded"
+          type="text"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>reasonForRejection:</td>
+      <td>
+        <input
+          [(ngModel)]="purchaseRequests.reasonForRejection"
+          class="rounded"
+          type="text"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>Photo Path:</td>
+      <td>
+        <input
+          [(ngModel)]="purchaseRequests.total"
+          class="rounded"
+          type="text"
+        />
+      </td>
+    </tr>
+  </table>
+</main>
+<span
+  ><button (click)="save()" class="btn btn-sm btn-primary">
+    {{ submitBtnTitle }}
+  </button></span
+>

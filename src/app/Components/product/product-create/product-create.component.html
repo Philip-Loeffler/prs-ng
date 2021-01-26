@@ -1,1 +1,52 @@
-<p>product-create works!</p>
+<app-menu></app-menu>
+<section class="heading">
+  <span class="component-title">[{{ title }}]</span>
+</section>
+<main class="single">
+  <table class="table table-sm">
+    <tr>
+      <td>Username:</td>
+      <td>
+        <input [(ngModel)]="product.userName" class="rounded" type="text" />
+      </td>
+    </tr>
+    <tr>
+      <td>First Name:</td>
+      <td>
+        <input [(ngModel)]="product.firstName" class="rounded" type="text" />
+      </td>
+    </tr>
+    <tr>
+      <td>Last Name:</td>
+      <td>
+        <input [(ngModel)]="product.lastName" class="rounded" type="text" />
+      </td>
+    </tr>
+    <tr>
+      <td>Phone Number:</td>
+      <td>
+        <input [(ngModel)]="product.phoneNumber" class="rounded" type="text" />
+      </td>
+    </tr>
+    <tr></tr>
+    <tr>
+      <td>Emailr:</td>
+      <td>
+        <input [(ngModel)]="product.email" class="rounded" type="text" />
+      </td>
+    </tr>
+    <tr>
+      <td>isReviewer:</td>
+      <td>placeholder for is reviewer</td>
+    </tr>
+    <tr>
+      <td>isAdmin</td>
+      <td>place holder for isadmin</td>
+    </tr>
+  </table>
+</main>
+<span
+  ><button (click)="save()" class="btn btn-sm btn-primary">
+    {{ submitBtnTitle }}
+  </button></span
+>
