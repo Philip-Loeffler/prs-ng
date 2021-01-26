@@ -1,4 +1,4 @@
-import { User } from '../Model/User';
+import { User } from 'src/app/Model/user';
 
 export class PurchaseRequest {
   id: number;

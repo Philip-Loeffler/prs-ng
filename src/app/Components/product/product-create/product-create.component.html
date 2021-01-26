@@ -5,43 +5,47 @@
 <main class="single">
   <table class="table table-sm">
     <tr>
-      <td>Username:</td>
+      <td>id:</td>
       <td>
-        <input [(ngModel)]="product.userName" class="rounded" type="text" />
+        <input [(ngModel)]="products.id" class="rounded" type="text" />
       </td>
     </tr>
     <tr>
-      <td>First Name:</td>
+      <td>vendor</td>
       <td>
-        <input [(ngModel)]="product.firstName" class="rounded" type="text" />
+        <input [(ngModel)]="products.vendor" class="rounded" type="text" />
       </td>
     </tr>
     <tr>
-      <td>Last Name:</td>
+      <td>partNumber:</td>
       <td>
-        <input [(ngModel)]="product.lastName" class="rounded" type="text" />
+        <input [(ngModel)]="products.partNumber" class="rounded" type="text" />
       </td>
     </tr>
     <tr>
-      <td>Phone Number:</td>
+      <td>name :</td>
       <td>
-        <input [(ngModel)]="product.phoneNumber" class="rounded" type="text" />
+        <input [(ngModel)]="products.name" class="rounded" type="text" />
       </td>
     </tr>
     <tr></tr>
     <tr>
-      <td>Emailr:</td>
+      <td>price:</td>
       <td>
-        <input [(ngModel)]="product.email" class="rounded" type="text" />
+        <input [(ngModel)]="products.price" class="rounded" type="text" />
       </td>
     </tr>
     <tr>
-      <td>isReviewer:</td>
-      <td>placeholder for is reviewer</td>
+      <td>unit:</td>
+      <td>
+        <input [(ngModel)]="products.unit" class="rounded" type="text" />
+      </td>
     </tr>
     <tr>
-      <td>isAdmin</td>
-      <td>place holder for isadmin</td>
+      <td>photoPath:</td>
+      <td>
+        <input [(ngModel)]="products.photoPath" class="rounded" type="text" />
+      </td>
     </tr>
   </table>
 </main>
