@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./vendor-edit.component.css'],
 })
 export class VendorEditComponent implements OnInit {
-  title: string = 'User edit';
+  title: string = 'Vendor Edit';
   vendor: Vendor = null;
   vendorId: number = 0;
   submitBtnTitle = 'save';

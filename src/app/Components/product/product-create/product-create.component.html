@@ -7,13 +7,17 @@
     <tr>
       <td>id:</td>
       <td>
-        <input [(ngModel)]="products.id" class="rounded" type="text" />
+        <input [(ngModel)]="products.partNumber" class="rounded" type="text" />
       </td>
     </tr>
     <tr>
       <td>vendor</td>
       <td>
-        <input [(ngModel)]="products.vendor" class="rounded" type="text" />
+        <select [(ngModel)]="products.vendor" class="rounded">
+          <option *ngFor="let vendor of vendors" [ngValue]="vendor">
+            {{ vendor.name }}
+          </option>
+        </select>
       </td>
     </tr>
     <tr>

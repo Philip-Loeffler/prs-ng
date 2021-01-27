@@ -9,7 +9,7 @@ import { VendorService } from 'src/app/Service/vendor.service';
   styleUrls: ['./vendor-detail.component.css'],
 })
 export class VendorDetailComponent implements OnInit {
-  title: string = 'User detail';
+  title: string = 'Vendor Details';
   vendor: Vendor = null;
   vendorId: number = 0;
   constructor(

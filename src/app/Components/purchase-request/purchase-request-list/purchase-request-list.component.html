@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <section class="heading">
   <span class="page-title font-weight-bold font-italic">[{{ title }}]</span>
-  <a routerLink="/user-create">
+  <a routerLink="/purchase-request-create">
     <img width="20" height="20" src="assets/add-icon.png" title="Add New" />
   </a>
 </section>
@@ -34,7 +34,7 @@
       <td>{{ purchaseRequest.reasonForRejection }}</td>
 
       <td>
-        <a routerLink="/purchase-request-detail/{{ purchaseRequests.id }}">
+        <a routerLink="/purchase-request-detail/{{ purchaseRequest.id }}">
           <img
             width="20"
             height="20"
@@ -43,7 +43,7 @@
           />
         </a>
 
-        <a routerLink="/purchase-request-detail/{{ purchaseRequests.id }}">
+        <a routerLink="/purchase-request-edit/{{ purchaseRequest.id }}">
           <img
             width="20"
             height="20"
