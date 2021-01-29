@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { LineItem } from '../Model/LineItem';
+import { LineItem } from '../Model/lineItem';
 
-const URL = 'http://localhost:8080/product';
+const URL = 'http://localhost:8080/lineItem';
 @Injectable({
   providedIn: 'root',
 })

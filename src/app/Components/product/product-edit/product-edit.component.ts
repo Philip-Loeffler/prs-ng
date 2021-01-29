@@ -11,7 +11,7 @@ export class ProductEditComponent implements OnInit {
   title: string = 'Product edit';
   product: Product = null;
   productId: number = 0;
-  submitBtnTitle = 'save';
+
   //activated route lets us get the id
   constructor(
     private productService: ProductService,

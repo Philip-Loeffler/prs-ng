@@ -13,7 +13,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class PurchaseRequestLinesComponent implements OnInit {
   title: string = 'Purchase Requests Line Items';
   purchaseRequests: PurchaseRequest = null;
-  lineItems: LineItem = null;
+  lineItems: LineItem[];
+
   purchaseRequestsId: number = 0;
   submitBtnTitle = 'save';
   //activated route lets us get the id
@@ -25,6 +26,17 @@ export class PurchaseRequestLinesComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.lineItemSvc.getAll().subscribe(
+      (resp) => {
+        this.lineItems = resp as LineItem[];
+        console.log('lineitem', this.lineItems);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+    //populate list of movies
+
     this.route.params.subscribe(
       (params) => (this.purchaseRequestsId = params['id'])
     );

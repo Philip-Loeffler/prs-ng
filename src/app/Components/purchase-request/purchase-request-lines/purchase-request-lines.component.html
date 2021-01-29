@@ -1,1 +1,27 @@
-<p>purchase-request-lines works!</p>
+<app-menu></app-menu>
+<section class="heading">
+  <span class="page-title font-weight-bold font-italic">[{{ title }}]</span>
+  <span
+    >&nbsp;<a routerLink="/purchase-request-list"
+      >Return to purchase request list</a
+    ></span
+  >
+</section>
+<table class="table table-sm table-striped">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>description</th>
+      <th>status</th>
+      <th>total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let purchaseRequest of purchaseRequests">
+      <td>{{ purchaseRequest.id }}</td>
+      <td>{{ purchaseRequest.description }}</td>
+      <td>{{ purchaseRequest.status }}</td>
+      <td>{{ purchaseRequest.total }}</td>
+    </tr>
+  </tbody>
+</table>

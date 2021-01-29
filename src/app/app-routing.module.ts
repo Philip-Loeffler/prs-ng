@@ -19,6 +19,8 @@ import { PurchaseRequestDetailComponent } from './Components/purchase-request/pu
 import { PurchaseRequestEditComponent } from './Components/purchase-request/purchase-request-edit/purchase-request-edit.component';
 import { PurchaseRequestCreateComponent } from './Components/purchase-request/purchase-request-create/purchase-request-create.component';
 
+import { PurchaseRequestLinesComponent } from './Components/purchase-request/purchase-request-lines/purchase-request-lines.component';
+
 const routes: Routes = [
   { path: 'user-login', component: UserLoginComponent },
   { path: 'user-list', component: UserListComponent },
@@ -45,6 +47,10 @@ const routes: Routes = [
   {
     path: 'purchase-request-create',
     component: PurchaseRequestCreateComponent,
+  },
+  {
+    path: 'purchase-request-lines/:id',
+    component: PurchaseRequestLinesComponent,
   },
 ];
 

@@ -17,6 +17,7 @@ export class PurchaseRequestListComponent implements OnInit {
     this.PurchaseRequestSvc.getAll().subscribe(
       (resp) => {
         this.purchaseRequests = resp as PurchaseRequest[];
+        console.log(this.purchaseRequests);
       },
       (err) => {
         console.log(err);

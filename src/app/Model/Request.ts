@@ -1,4 +1,4 @@
-import { User } from 'src/app/Model/User';
+import { User } from 'src/app/Model/user';
 
 export class Request {
   id: number;
