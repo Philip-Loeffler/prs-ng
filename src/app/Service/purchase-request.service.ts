@@ -10,7 +10,6 @@ const URL = 'http://localhost:8080/request';
 export class PurchaseRequestService {
   constructor(private http: HttpClient) {}
 
-  //returns all movies as an observable type
   getAll(): Observable<PurchaseRequest[]> {
     return this.http.get(URL + '/') as Observable<PurchaseRequest[]>;
   }
