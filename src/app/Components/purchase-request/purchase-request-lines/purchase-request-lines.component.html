@@ -32,28 +32,29 @@
       <th>Quantity</th>
       <th>Price</th>
       <th>Line Total</th>
-      <th [hidden]="isDisabled">Action</th>
+      <th>Action</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngIf="lineItems.length > 0; else noLines">
     <tr *ngFor="let lineItem of lineItems">
       <td>{{ lineItem.id }}</td>
       <td>{{ lineItem.product.name }}</td>
       <td>{{ lineItem.quantity }}</td>
       <td>{{ lineItem.product.price | currency }}</td>
       <td>{{ lineItem.quantity * lineItem.product.price | currency }}</td>
-      <td>
-       
-      </td>
+      <td></td>
     </tr>
-    <button
+
+    <!-- <button
       class="btn btn-primary"
       [disabled]="isDisabled"
       [hidden]="isHidden"
       (click)="submit()"
     >
       Submit for Review
-    </button>
-    </tr>
+    </button> -->
   </tbody>
+  <ng-template #noLines>
+    <div class="no-line-items">No line Items yet. Please create a new one</div>
+  </ng-template>
 </table>
