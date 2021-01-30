@@ -37,7 +37,6 @@ export class UserEditComponent implements OnInit {
     this.userService.update(this.user).subscribe(
       (resp) => {
         this.user = resp as User;
-        console.log('movies', this.user);
         this.router.navigateByUrl('/user-list');
       },
       (err) => {

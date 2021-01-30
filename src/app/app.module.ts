@@ -25,8 +25,8 @@ import { PurchaseRequestDetailComponent } from './Components/purchase-request/pu
 import { PurchaseRequestApproveComponent } from './Components/purchase-request/purchase-request-approve/purchase-request-approve.component';
 import { PurchaseRequestLinesComponent } from './Components/purchase-request/purchase-request-lines/purchase-request-lines.component';
 import { PurchaseRequestReviewComponent } from './Components/purchase-request/purchase-request-review/purchase-request-review.component';
-import { LineItemCreateComponent } from './Components/line-item/line-item-create/line-item-create/line-item-create.component';
-import { LineItemEditComponent } from './Components/line-item/line-item-edit/line-item-edit/line-item-edit.component';
+import { LineItemCreateComponent } from './Components/line-item/line-item-create/line-item-create.component';
+import { LineItemEditComponent } from './Components/line-item/line-item-edit/line-item-edit.component';
 
 @NgModule({
   declarations: [

@@ -1,15 +1,66 @@
 import { Component, OnInit } from '@angular/core';
-
+import { LineItem } from 'src/app/Model/lineItem';
+import { LineItemService } from 'src/app/Service/lineItem.service';
+import { Product } from 'src/app/Model/product';
+import { PurchaseRequest } from 'src/app/Model/PurchaseRequest';
+import { ProductService } from 'src/app/Service/product.service';
+import { PurchaseRequestService } from 'src/app/Service/purchase-request.service';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-line-item-create',
   templateUrl: './line-item-create.component.html',
-  styleUrls: ['./line-item-create.component.css']
+  styleUrls: ['./line-item-create.component.css'],
 })
 export class LineItemCreateComponent implements OnInit {
+  title = 'PurchaseRequest Line Items Create - PR ID: ';
+  submitBtnTitle = 'Create';
+  products: Product[] = [];
+  lineItem: LineItem = new LineItem();
+  purchaseRequests: PurchaseRequest = new PurchaseRequest();
+  requestId = 0;
 
-  constructor() { }
+  constructor(
+    private lineItemSvc: LineItemService,
+    private productSvc: ProductService,
+    private requestSvc: PurchaseRequestService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
+    this.route.params.subscribe((parms) => {
+      this.requestId = parms['id'];
+    });
+
+    this.requestSvc.getById(this.requestId).subscribe(
+      (resp) => {
+        this.purchaseRequests = resp as PurchaseRequest;
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+
+    this.productSvc.getAll().subscribe(
+      (resp) => {
+        this.products = resp as Product[];
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
   }
 
+  save() {
+    this.lineItem.request = this.purchaseRequests;
+    this.lineItemSvc.create(this.lineItem).subscribe(
+      (resp) => {
+        this.lineItem = resp as LineItem;
+        this.router.navigateByUrl('/request-lines/' + this.requestId);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
 }

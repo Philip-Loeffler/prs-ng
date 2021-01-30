@@ -24,6 +24,12 @@
   </tbody>
 </table>
 
+<section class="heading">
+  <span class="page-title font-weight-bold font-italic">lines</span>
+  <a routerLink="/line-item-create/{{ purchaseRequests.id }}">
+    <img width="20" height="20" src="assets/add-icon.png" title="Add New" />
+  </a>
+</section>
 <table class="table table-sm table-striped">
   <thead>
     <tr>
@@ -36,7 +42,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngIf="lineItems.length > 0">
+    <tr *ngIf="lineItems.length === 0">
       <td colspan="6" class="table-danger">no line items</td>
     </tr>
 

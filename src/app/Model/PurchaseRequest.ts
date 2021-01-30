@@ -5,11 +5,11 @@ export class PurchaseRequest {
   user: User;
   description: string;
   justification: string;
-  dateNeeded: Date;
+  dateNeeded: string;
   deliveryMode: string;
   status: string;
   total: number;
-  submittedDate: Date;
+  submittedDate: string;
   reasonForRejection: string;
 
   constructor(
@@ -17,11 +17,11 @@ export class PurchaseRequest {
     user: User = new User(),
     description: string = '',
     justification: string = '',
-    dateNeeded: Date = new Date(),
+    dateNeeded: string = '',
     deliveryMode: string = '',
     status: string = '',
     total: number = 0,
-    submittedDate: Date = new Date(),
+    submittedDate: string = '',
     reasonForRejection: string = ''
   ) {
     this.id = id;
