@@ -35,7 +35,11 @@
       <th>Action</th>
     </tr>
   </thead>
-  <tbody *ngIf="lineItems.length > 0; else noLines">
+  <tbody>
+    <tr *ngIf="lineItems.length > 0">
+      <td colspan="6" class="table-danger">no line items</td>
+    </tr>
+
     <tr *ngFor="let lineItem of lineItems">
       <td>{{ lineItem.id }}</td>
       <td>{{ lineItem.product.name }}</td>
