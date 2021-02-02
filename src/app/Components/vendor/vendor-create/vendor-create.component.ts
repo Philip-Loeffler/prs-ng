@@ -19,7 +19,6 @@ export class VendorCreateComponent implements OnInit {
     this.userSvc.create(this.vendor).subscribe(
       (resp) => {
         this.vendor = resp as Vendor;
-        console.log('movies', this.vendor);
         this.router.navigateByUrl('/vendor-list');
       },
       (err) => {

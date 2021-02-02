@@ -52,16 +52,28 @@
       <td>{{ lineItem.quantity }}</td>
       <td>{{ lineItem.product.price | currency }}</td>
       <td>{{ lineItem.quantity * lineItem.product.price | currency }}</td>
-      <td></td>
+      <td>
+        <a routerLink="/line-item-edit/{{ lineItem.id }}">
+          <img
+            width="20"
+            height="20"
+            src="assets/pencil-icon.png"
+            title="Line Item Edit"
+          />
+        </a>
+        <a
+          routerLink="/purchase-request-lines/{{ request.id }}/{{
+            lineItem.id
+          }}"
+        >
+          <img
+            width="20"
+            height="20"
+            src="assets/delete.jpg"
+            title="Line Item Delete"
+          />
+        </a>
+      </td>
     </tr>
-
-    <!-- <button
-      class="btn btn-primary"
-      [disabled]="isDisabled"
-      [hidden]="isHidden"
-      (click)="submit()"
-    >
-      Submit for Review
-    </button> -->
   </tbody>
 </table>

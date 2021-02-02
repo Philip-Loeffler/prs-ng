@@ -23,6 +23,5 @@ export class PurchaseRequestListComponent implements OnInit {
         console.log(err);
       }
     );
-    //populate list of movies
   }
 }

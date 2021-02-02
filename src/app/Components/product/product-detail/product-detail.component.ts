@@ -25,7 +25,6 @@ export class ProductDetailComponent implements OnInit {
       (resp) => {
         this.product = resp as Product;
         console.log(this.product.id);
-        console.log('movies', this.product);
       },
       (err) => {
         console.log(err);
@@ -36,7 +35,6 @@ export class ProductDetailComponent implements OnInit {
     this.productService.delete(this.product.id).subscribe(
       (resp) => {
         this.product = resp as Product;
-        console.log('movies', this.product);
         this.router.navigateByUrl('/product-list');
       },
       (err) => {

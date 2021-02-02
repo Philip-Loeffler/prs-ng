@@ -35,7 +35,7 @@ const routes: Routes = [
   { path: 'vendor-edit/:id', component: VendorEditComponent },
   { path: 'vendor-create', component: VendorCreateComponent },
   { path: 'line-item-edit/:id', component: LineItemEditComponent },
-  { path: 'line-item-create/id', component: LineItemCreateComponent },
+  { path: 'line-item-create/:id', component: LineItemCreateComponent },
   { path: 'purchase-request-list', component: PurchaseRequestListComponent },
   {
     path: 'purchase-request-detail/:id',

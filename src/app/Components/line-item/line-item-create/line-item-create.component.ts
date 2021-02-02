@@ -12,7 +12,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./line-item-create.component.css'],
 })
 export class LineItemCreateComponent implements OnInit {
-  title = 'PurchaseRequest Line Items Create - PR ID: ';
+  title = 'PurchaseRequest Line Items Create';
   submitBtnTitle = 'Create';
   products: Product[] = [];
   lineItem: LineItem = new LineItem();
@@ -36,18 +36,14 @@ export class LineItemCreateComponent implements OnInit {
       (resp) => {
         this.purchaseRequests = resp as PurchaseRequest;
       },
-      (err) => {
-        console.log(err);
-      }
+      (err) => {}
     );
 
     this.productSvc.getAll().subscribe(
       (resp) => {
         this.products = resp as Product[];
       },
-      (err) => {
-        console.log(err);
-      }
+      (err) => {}
     );
   }
 
@@ -56,11 +52,9 @@ export class LineItemCreateComponent implements OnInit {
     this.lineItemSvc.create(this.lineItem).subscribe(
       (resp) => {
         this.lineItem = resp as LineItem;
-        this.router.navigateByUrl('/request-lines/' + this.requestId);
+        this.router.navigateByUrl('/purchase-request-lines/' + this.requestId);
       },
-      (err) => {
-        console.log(err);
-      }
+      (err) => {}
     );
   }
 }
