@@ -33,4 +33,12 @@ export class PurchaseRequestService {
   delete(id: number): Observable<PurchaseRequest> {
     return this.http.delete(URL + '/' + id) as Observable<PurchaseRequest>;
   }
+
+  submitForReview(
+    purchaserequest: PurchaseRequest
+  ): Observable<PurchaseRequest> {
+    return this.http.put(URL + '/', purchaserequest) as Observable<
+      PurchaseRequest
+    >;
+  }
 }

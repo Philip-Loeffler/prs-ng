@@ -32,7 +32,6 @@ export class UserLoginComponent implements OnInit {
         }
       },
       (err) => {
-        console.log('User login error!', err);
         this.msg = 'Error during login';
       }
     );
