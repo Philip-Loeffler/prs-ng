@@ -37,7 +37,7 @@ export class PurchaseRequestService {
   submitForReview(
     purchaserequest: PurchaseRequest
   ): Observable<PurchaseRequest> {
-    return this.http.put(URL + '/', purchaserequest) as Observable<
+    return this.http.put(URL + '/submit-review', purchaserequest) as Observable<
       PurchaseRequest
     >;
   }

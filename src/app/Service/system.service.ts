@@ -9,7 +9,7 @@ export class SystemService {
   loggedInUser: User = null;
   constructor(private router: Router) {}
 
-  checklogin(): void {
+  checkLogin(): void {
     if (this.loggedInUser == null) {
       this.router.navigateByUrl('/user-login');
     }
