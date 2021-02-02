@@ -24,7 +24,7 @@
   </tbody>
 </table>
 
-<section class="heading">
+<section *ngIf="purchaseRequests" class="heading">
   <span class="page-title font-weight-bold font-italic">lines</span>
   <a routerLink="/line-item-create/{{ purchaseRequests.id }}">
     <img width="20" height="20" src="assets/add-icon.png" title="Add New" />
@@ -62,7 +62,7 @@
           />
         </a>
         <a
-          routerLink="/purchase-request-lines/{{ request.id }}/{{
+          routerLink="/purchase-request-lines/{{ purchaseRequests.id }}/{{
             lineItem.id
           }}"
         >
@@ -76,7 +76,7 @@
       </td>
     </tr>
   </tbody>
-  <button (click)="submitForReview()" class="btn btn-sm btn-primary">
+  <!-- <button (click)="submitForReview()" class="btn btn-sm btn-primary">
     {{ reviewButton }}
-  </button>
+  </button> -->
 </table>

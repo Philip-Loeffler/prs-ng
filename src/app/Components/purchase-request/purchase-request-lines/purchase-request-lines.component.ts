@@ -15,7 +15,6 @@ export class PurchaseRequestLinesComponent implements OnInit {
   purchaseRequestsId: number = 0;
   lineItems: LineItem[] = [];
   lineItem: LineItem = new LineItem();
-  requestId = 0;
 
   constructor(
     private lineItemService: LineItemService,
@@ -27,6 +26,7 @@ export class PurchaseRequestLinesComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((parms) => {
       this.purchaseRequestsId = parms['id'];
+      console.log(this.purchaseRequestsId);
     });
 
     this.requestSvc.getById(this.purchaseRequestsId).subscribe(

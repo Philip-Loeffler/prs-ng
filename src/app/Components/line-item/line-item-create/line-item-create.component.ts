@@ -30,6 +30,7 @@ export class LineItemCreateComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((parms) => {
       this.requestId = parms['id'];
+      console.log(this.requestId);
     });
 
     this.requestSvc.getById(this.requestId).subscribe(
@@ -48,7 +49,7 @@ export class LineItemCreateComponent implements OnInit {
   }
 
   save() {
-    this.lineItem.request = this.purchaseRequests;
+    this.lineItem.purchaseRequest = this.purchaseRequests;
     this.lineItemSvc.create(this.lineItem).subscribe(
       (resp) => {
         this.lineItem = resp as LineItem;
