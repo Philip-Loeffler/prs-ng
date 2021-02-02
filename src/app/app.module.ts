@@ -27,6 +27,7 @@ import { PurchaseRequestLinesComponent } from './Components/purchase-request/pur
 import { PurchaseRequestReviewComponent } from './Components/purchase-request/purchase-request-review/purchase-request-review.component';
 import { LineItemCreateComponent } from './Components/line-item/line-item-create/line-item-create.component';
 import { LineItemEditComponent } from './Components/line-item/line-item-edit/line-item-edit.component';
+import { NoComponentDefinedComponent } from './Components/no-component-defined/no-component-defined.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { LineItemEditComponent } from './Components/line-item/line-item-edit/lin
     PurchaseRequestReviewComponent,
     LineItemCreateComponent,
     LineItemEditComponent,
+    NoComponentDefinedComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

@@ -20,6 +20,8 @@ import { PurchaseRequestCreateComponent } from './Components/purchase-request/pu
 import { PurchaseRequestLinesComponent } from './Components/purchase-request/purchase-request-lines/purchase-request-lines.component';
 import { LineItemEditComponent } from './Components/line-item/line-item-edit/line-item-edit.component';
 import { LineItemCreateComponent } from './Components/line-item/line-item-create/line-item-create.component';
+import { NoComponentDefinedComponent } from './Components/no-component-defined/no-component-defined.component';
+
 const routes: Routes = [
   { path: 'user-login', component: UserLoginComponent },
   { path: 'user-list', component: UserListComponent },
@@ -53,6 +55,7 @@ const routes: Routes = [
     path: 'purchase-request-lines/:id',
     component: PurchaseRequestLinesComponent,
   },
+  { path: '**', component: NoComponentDefinedComponent },
 ];
 
 @NgModule({
