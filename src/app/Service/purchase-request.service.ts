@@ -41,4 +41,10 @@ export class PurchaseRequestService {
       PurchaseRequest
     >;
   }
+
+  review(id): Observable<PurchaseRequest[]> {
+    return this.http.get(URL + '/list-review/' + id) as Observable<
+      PurchaseRequest[]
+    >;
+  }
 }

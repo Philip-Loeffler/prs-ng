@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Menu } from 'src/app/Model/Menu';
+import { SystemService } from 'src/app/Service/system.service';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -15,8 +16,13 @@ export class MenuComponent implements OnInit {
       '/purchase-request-list',
       'Purchase Request List'
     ),
+    new Menu(
+      'Review',
+      '/purchase-request-review/' + this.systemService.loggedInUser.id,
+      'Review'
+    ),
   ];
-  constructor() {}
+  constructor(public systemService: SystemService) {}
 
   ngOnInit(): void {}
 }

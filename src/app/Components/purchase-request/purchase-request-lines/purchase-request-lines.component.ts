@@ -22,7 +22,6 @@ export class PurchaseRequestLinesComponent implements OnInit {
     private lineItemService: LineItemService,
     private purchaseRequestService: PurchaseRequestService,
     private sysSvc: SystemService,
-
     private router: Router,
     private route: ActivatedRoute
   ) {}
