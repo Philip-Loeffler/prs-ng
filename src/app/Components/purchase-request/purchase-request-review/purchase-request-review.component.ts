@@ -9,7 +9,7 @@ import { PurchaseRequest } from 'src/app/Model/PurchaseRequest';
   styleUrls: ['./purchase-request-review.component.css'],
 })
 export class PurchaseRequestReviewComponent implements OnInit {
-  purchaseRequests: PurchaseRequest[] = [];
+  purchaseRequests: PurchaseRequest[];
   constructor(
     private purchaseRequestSvc: PurchaseRequestService,
     private systemService: SystemService
@@ -23,6 +23,7 @@ export class PurchaseRequestReviewComponent implements OnInit {
       .subscribe(
         (resp) => {
           this.purchaseRequests = resp as PurchaseRequest[];
+          console.log(this.purchaseRequests);
         },
         (err) => {
           console.log(err);

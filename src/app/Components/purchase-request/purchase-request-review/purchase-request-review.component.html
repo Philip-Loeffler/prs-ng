@@ -14,14 +14,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let request of requests">
-      <td class="td-style">{{ request.id }}</td>
-      <td class="td-style">{{ request.user.userName }}</td>
-      <td class="td-style">{{ request.description }}</td>
-      <td class="td-style">{{ request.status }}</td>
-      <td class="td-style">{{ request.total | currency }}</td>
+    <tr *ngFor="let purchaseRequest of purchaseRequests">
+      <td class="td-style">{{ purchaseRequest.id }}</td>
+      <td class="td-style">{{ purchaseRequest.user.userName }}</td>
+      <td class="td-style">{{ purchaseRequest.description }}</td>
+      <td class="td-style">{{ purchaseRequest.status }}</td>
+      <td class="td-style">{{ purchaseRequest.total | currency }}</td>
       <td>
-        <a routerLink="/request-approve/{{ request.id }}">
+        <a routerLink="/purchase-request-approve/{{ purchaseRequest.id }}">
           <img
             width="20"
             height="20"
